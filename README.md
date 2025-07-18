@@ -42,11 +42,11 @@ $ python main.py
 
 
 2. Photo retouching on PPR10K dataset
-<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Retouching_PPR10K.jpg" alt="Retouching PPR10K" width="100%" height="70%" border="10"/>
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Retouching_PPR10K.jpg" alt="Retouching PPR10K" width="80%" height="70%" border="10"/>
 
 
 3. Tone mapping on FiveK dataset
-<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_ToneMap_FiveK.jpg" alt="ToneMap FiveK" width="80%" height="70%" border="10"/>
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_ToneMap_FiveK.jpg" alt="ToneMap FiveK" width="100%" height="70%" border="10"/>
 
 
 4. Underwater image enhancement on UIEB dataset
