@@ -22,16 +22,16 @@ $ pip install opencv-python==4.10.0
 ### Evaluation
 Run with
 ```
-cd root/code/
+cd root/LUTFormer_code/
 python main.py
 ```
 
 ### Train
 For training LUTFormer,
-1. Edit `root/code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `model_name`, `dataset_name`, and `expert`.
+1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `model_name`, `dataset_name`, and `expert`.
 2. Run with
 ```
-$ cd root/code/
+$ cd root/LUTFormer_code/
 $ python main.py
 ```
 
