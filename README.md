@@ -35,3 +35,20 @@ $ cd root/code/
 $ python main.py
 ```
 
+
+### Results
+1. Photo retouching on FiveK dataset
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Retouching_FiveK.jpg" alt="Retouching FiveK" width="100%" height="70%" border="10"/>
+
+
+2. Photo retouching on PPR10K dataset
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Retouching_PPR10K.jpg" alt="Retouching PPR10K" width="100%" height="70%" border="10"/>
+
+
+3. Tone mapping on FiveK dataset
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_ToneMap_FiveK.jpg" alt="Composition-based image retrieval" width="100%" height="70%" border="10"/>
+
+
+4. Underwater image enhancement on UIEB dataset
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Underwater_UIEB.jpg" alt="Symmetric axis detection" width="80%" height="55%" border="10"/>
+
