@@ -40,7 +40,7 @@ class Config:
         self.dataset_root = os.path.abspath(os.path.join('/home/jwko/Datasets'))
 
         self.code_name = os.getcwd().split('/')[-1]
-        self.output_name = self.code_name.replace('_code', '_output')
+        self.output_name = self.code_name.replace('code', 'output')
         self.proj_dir = os.path.join(self.root, f'{self.code_name}')
         self.output_dir = os.path.join(self.root, f'{self.output_name}')
 
