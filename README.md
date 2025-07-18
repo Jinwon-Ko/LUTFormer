@@ -46,7 +46,7 @@ $ python main.py
 
 
 3. Tone mapping on FiveK dataset
-<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_ToneMap_FiveK.jpg" alt="ToneMap FiveK" width="100%" height="70%" border="10"/>
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_ToneMap_FiveK.jpg" alt="ToneMap FiveK" width="80%" height="70%" border="10"/>
 
 
 4. Underwater image enhancement on UIEB dataset
