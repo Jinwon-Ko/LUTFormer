@@ -12,7 +12,7 @@ Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"*
 $ conda create -n LUTFormer python=3.9 anaconda
 $ conda activate LUTFormer
 $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-$ pip install opencv-python==4.10.0
+$ pip install opencv-python-headless==4.10.0.82
 ```
 
 2. If you want to get the performance of the paper, download our [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing). to ```root/pretrained/```.
@@ -20,21 +20,31 @@ $ pip install opencv-python==4.10.0
 
 
 ### Evaluation
-Run with
+To evaluate LUTFormer,
+1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test_paper'`. Also, set the `task_name`, `dataset_name`, and `expert`. If you want to visualize the results, set `viz` to `True`.
+2. Run with
 ```
 cd root/LUTFormer_code/
 python main.py
 ```
 
 ### Train
-For training LUTFormer,
-1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `model_name`, `dataset_name`, and `expert`.
+To train LUTFormer,
+1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `task_name`, `dataset_name`, and `expert`.
 2. Run with
 ```
 $ cd root/LUTFormer_code/
 $ python main.py
 ```
 
+### Test
+To test your trained LUTFormer model,
+1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test'`. Also, set the `task_name`, `dataset_name`, and `expert`.
+2. Run with
+```
+$ cd root/LUTFormer_code/
+$ python main.py
+```
 
 ### Results
 1. Photo retouching on FiveK dataset
