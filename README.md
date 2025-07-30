@@ -41,7 +41,7 @@ If you want to get the performance of the paper,
 cd root/LUTFormer_code/
 python main.py
 ```
-Pretrained models are available in `./pretrained/`. They can also be downloaded from [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
+Pretrained models are available in `./pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
 3. Calculate the score using Matlab code
    - FiveK
