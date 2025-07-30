@@ -3,11 +3,11 @@
 
 Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"**.
 
-### Dataset
+## Dataset
 The [FiveK](https://data.csail.mit.edu/graphics/fivek/), [PPR10K](https://github.com/csjliang/PPR10K), [UIEB](https://li-chongyi.github.io/proj_benchmark.html), and [EUVP](https://irvlab.cs.umn.edu/resources/euvp-dataset) datasets are used for experiments.  </br>
 The [AdaInt](https://github.com/ImCharlesY/AdaInt/blob/main/Prepare_FiveK.md) project also provides an instruction for generating a 480p version of FiveK to accelerate in the training process. 
 
-### Installation
+## Installation
 Create conda environment:
 ```
 $ conda create -n LUTFormer python=3.9 anaconda
@@ -16,7 +16,7 @@ $ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolk
 $ pip install opencv-python-headless==4.10.0.82
 ```
 
-### Train
+## Train
 To train LUTFormer,
 1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `task_name`, `dataset_name`, and `expert`. If you want to visualize the results, set `viz` to `True`.
 2. Run with
@@ -25,7 +25,7 @@ $ cd root/LUTFormer_code/
 $ python main.py
 ```
 
-### Test
+## Test
 To test your trained LUTFormer model,
 1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test'`. Also, set the `task_name`, `dataset_name`, and `expert`.
 2. Run with
@@ -53,7 +53,7 @@ Pretrained models are available in `./pretrained/`. They can also be downloaded 
      (matlab) > ./ppr10k_calculate_metrics.m [evaluate image dir] [GT dir] [mask dir]
      ```
 
-### Results
+## Results
 1. Photo retouching on FiveK dataset
 <img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Results_for_Retouching_FiveK.jpg" alt="Retouching FiveK" width="100%" height="70%" border="10"/>
 
