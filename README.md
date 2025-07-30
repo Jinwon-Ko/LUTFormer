@@ -33,14 +33,14 @@ $ cd root/LUTFormer_code/
 $ python main.py
 ```
 
-If you want to get the performance of the paper, download our [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing). to ```root/pretrained/```.
+If you want to get the performance of the paper,
 1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test_paper'`. Also, set the `task_name`, `dataset_name`, and `expert`.
 2. Run with
 ```
 cd root/LUTFormer_code/
 python main.py
 ```
-
+Pretrained models are available in `./pretrained/`. Pretrained models can also be downloaded from [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
 
 ### Results
