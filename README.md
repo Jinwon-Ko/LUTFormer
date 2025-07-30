@@ -4,7 +4,7 @@
 Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"**.
 
 ### Dataset
-
+The [FiveK](https://data.csail.mit.edu/graphics/fivek/) and [PPR10K](https://github.com/csjliang/PPR10K) datasets are used for experiments.
 
 ### Installation
 Create conda environment:
@@ -34,14 +34,23 @@ $ python main.py
 ```
 
 If you want to get the performance of the paper,
-1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test_paper'`. Also, set the `task_name`, `dataset_name`, and `expert`.
+1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test_paper'`. Also, set the `task_name`, `dataset_name`, and `expert`. Also, set `viz` to `True`.
 2. Run with
 ```
 cd root/LUTFormer_code/
 python main.py
 ```
-Pretrained models are available in `./pretrained/`. Pretrained models can also be downloaded from [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
+Pretrained models are available in `./pretrained/`. They can also be downloaded from [pre-trained model](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
+3. Calculate the score using Matlab code
+   - FiveK
+     ```shell
+     (matlab) > ./fivek_calculate_metrics.m [evaluate image dir] [GT dir]
+     ```
+   - PPR10K
+     ```shell
+     (matlab) > ./ppr10k_calculate_metrics.m [evaluate image dir] [GT dir] [mask dir]
+     ```
 
 ### Results
 1. Photo retouching on FiveK dataset
