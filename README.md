@@ -26,8 +26,11 @@ $ python main.py
 ```
 
 ## Test
-To test your trained LUTFormer model,
-1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'test'` and set `viz` to `True`. Also, set the `task_name`, `dataset_name`, and `expert`. 
+To evaluate your trained LUTFormer model,
+1. Edit the configuation file:
+   - Open `root/LUTFormer_code/config.py`.
+   - Set `run_mode` to `'test'` and `viz` to `True`.
+   - Specify the values for `task_name`, `dataset_name`, and `expert`. 
 2. Run with
 ```
 $ cd root/LUTFormer_code/
@@ -44,7 +47,8 @@ $ python main.py
      (matlab) > ./ppr10k_calculate_metrics.m [evaluate image dir] [GT dir] [mask dir]
      ```
 
-If you want to get the performance of the paper, Please modify `run_mode` to `'test_paper'`.
+** Note: **
+If you want to get the performance of the paper, set `run_mode` to `'test_paper'`.
 Pretrained models are available in `./pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
 ## Results
