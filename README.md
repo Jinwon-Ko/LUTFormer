@@ -47,8 +47,8 @@ $ python main.py
      (matlab) > ./ppr10k_calculate_metrics.m [evaluate image dir] [GT dir] [mask dir]
      ```
 
-** Note: **
-If you want to get the performance of the paper, set `run_mode` to `'test_paper'`.
+*** Note ***  </br>
+If you want to get the performance of the paper, set `run_mode` to `'test_paper'`.   </br>
 Pretrained models are available in `./pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
 ## Results
