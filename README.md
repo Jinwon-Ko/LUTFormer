@@ -18,7 +18,10 @@ $ pip install opencv-python-headless==4.10.0.82
 
 ## Train
 To train LUTFormer,
-1. Edit `root/LUTFormer_code/config.py`. Please modify `run_mode` to `'train'`. Also, set the `task_name`, `dataset_name`, and `expert`. If you want to visualize the results, set `viz` to `True`.
+1. Edit the configuration file:
+   - Open `root/LUTFormer_code/config.py`.
+   - Set `run_mode` to `'train'`. Also, set the `task_name`, `dataset_name`, and `expert`.
+   - (Optional) If you want to visualize the results, set `viz` to `True`.
 2. Run with
 ```
 $ cd root/LUTFormer_code/
