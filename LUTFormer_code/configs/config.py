@@ -56,7 +56,7 @@ class Config:
             self.checkpoint['model'] = os.path.join(self.save_dir, ckpt_name)
 
         if self.run_mode == 'test_paper':
-            ckpt_dir = os.path.join(self.root, f'pretrained')
+            ckpt_dir = os.path.join(self.code_name, f'pretrained')
             ckpt_name = f'{self.exp_name}.pth'
             self.checkpoint['model'] = os.path.join(ckpt_dir, ckpt_name)
 
