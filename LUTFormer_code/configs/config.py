@@ -18,21 +18,21 @@ class Config:
         self.load = True            # Load pre-trained model
         self.viz = False
 
-        # model_name  : dataset_name
+        # task_name  : dataset_name
         # 'Retouching': ['FiveK', 'PPR10K']
         # 'ToneMap':    ['FiveK']
         # 'Underwater': ['UIEB', 'EUVP']
-        self.model_name = 'Retouching'
+        self.task_name = 'Retouching'
         self.dataset_name = 'FiveK'
         self.expert = 'c'
 
         if self.dataset_name == 'FiveK':
             self.expert = 'c'
-        if self.model_name == 'Underwater':
+        if self.task_name == 'Underwater':
             self.expert = ''
 
         self.validate_config()
-        self.override_config_with_yaml(f'configs/{self.model_name}_{self.dataset_name}.yaml')
+        self.override_config_with_yaml(f'configs/{self.task_name}_{self.dataset_name}.yaml')
         self.settings_for_path()
 
     def settings_for_path(self):
@@ -44,7 +44,7 @@ class Config:
         self.proj_dir = os.path.join(self.root, f'{self.code_name}')
         self.output_dir = os.path.join(self.root, f'{self.output_name}')
 
-        self.exp_name = f'{self.model_name}_{self.dataset_name}_expert{self.expert.capitalize()}'
+        self.exp_name = f'{self.task_name}_{self.dataset_name}_expert{self.expert.capitalize()}'
         self.viz_dir = os.path.join(self.output_dir, f'display/{self.exp_name}')
         self.save_dir = os.path.join(self.output_dir, f'weights/{self.exp_name}')
         os.makedirs(self.viz_dir, exist_ok=True)
@@ -96,10 +96,10 @@ class Config:
                          'UIEB': [''],
                          'EUVP': ['']}
 
-        if self.model_name not in valid_models:
-            raise ValueError(f'Invalid model_name: {self.model_name}')
+        if self.task_name not in valid_models:
+            raise ValueError(f'Invalid task_name: {self.task_name}')
 
-        if self.dataset_name not in valid_models[self.model_name]:
+        if self.dataset_name not in valid_models[self.task_name]:
             raise ValueError(f'Invalid dataset_name: {self.dataset_name}')
 
         if self.expert not in valid_experts[self.dataset_name]:
