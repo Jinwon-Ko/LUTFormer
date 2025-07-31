@@ -49,7 +49,25 @@ $ python main.py
 
 *** Note ***  </br>
 If you want to get the performance of the paper, set `run_mode` to `'test_paper'`.   </br>
-Pretrained models are available in `./LUTFormer_code/pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
+Pretrained models are available in `root/LUTFormer_code/pretrained`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
+
+
+## Demo
+You can run a demo with pretrained models to enhance your own images.
+1. Prepare your input images
+   - Place your images in the directory specified by `--input_dir` (default: `root/LUTFormer_code/demo_img/input`)
+   - The enhanced results will be saved to `--output_dir` (default: `root/LUTFormer_code/demo_img/result`)
+2. (Optional) Check configuration:
+   - Edit the YAML configuration file (default: `root/LUTFormer_code/configs/Retouching_FiveK.yaml`)
+   - You can also override settings via command-line arguments, including:
+      - `--yaml_path` (default: `root/LUTFormer_code/configs/Retouching_FiveK.yaml`)
+      - `--pretrained_path` (default: `root/LUTFormer_code/pretrained/Retouching_FiveK_expertC.pth`)
+      - `--task_name`, `--dataset_name`, `--expert`
+3. Run demo with
+```
+$ cd root/LUTFormer_code/
+$ python demo.py --input_dir ./demo_img/input --out_dir ./demo_img/result
+```
 
 ## Results
 1. Photo retouching on FiveK dataset
