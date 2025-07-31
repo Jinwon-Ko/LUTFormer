@@ -135,6 +135,13 @@ class Visualizer(object):
             self.saveimg_one(dir_name=os.path.join(cfg.viz_dir, f'analysis/gt'), file_name=name + '.png', show_name='gt')
             self.saveimg_one(dir_name=os.path.join(cfg.viz_dir, f'analysis/pred'), file_name=name + '.png', show_name='enhanced')
 
+    def viz_demo(self, cfg, enhanced, img_name):
+        ######################################################################################
+        # Draw input & output & GT
+        name, ext = os.path.splitext(img_name)
+        self.update_image(img=enhanced, name='enhanced')
+        self.saveimg_one(dir_name=cfg.output_dir, file_name=name + '.png', show_name='enhanced')
+
     def viz_identity_LUT(self, cfg, identity):
         N = cfg.network['n_points']
 
