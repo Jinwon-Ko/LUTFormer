@@ -3,7 +3,7 @@ def load_dataset(cfg, mode=''):
 
     if 'FiveK' in cfg.dataset_name:
         resol = cfg.testing['resol']
-        if 'Retouch' in cfg.model_name:
+        if 'Retouch' in cfg.task_name:
             from dataloaders.Retouching.FiveK_dataset import FiveK_train_dataset, FiveK_test_dataset
 
             dataset = FiveK_train_dataset(cfg, expert=f'{cfg.expert}') if mode == 'train' \
