@@ -7,7 +7,6 @@ class LookUpTable_Estimator(Three_Dimensional_LUT):
     def __init__(self, cfg):
         super(LookUpTable_Estimator, self).__init__(cfg)
 
-        self.model_name = cfg.dataset_name
         self.downsample = DownSample(cfg)
         self.feature_extractor = Feature_extractor(cfg)
         self.generate_lut = LUT_token_update(cfg)
