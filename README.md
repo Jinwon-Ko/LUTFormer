@@ -49,7 +49,7 @@ $ python main.py
 
 *** Note ***  </br>
 If you want to get the performance of the paper, set `run_mode` to `'test_paper'`.   </br>
-Pretrained models are available in `./pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
+Pretrained models are available in `./LUTFormer_code/pretrained/`. They can also be downloaded from [here](https://drive.google.com/file/d/1X70k12VlxTus5ppQlq-ZPl53zxSv-uom/view?usp=sharing).
 
 ## Results
 1. Photo retouching on FiveK dataset
