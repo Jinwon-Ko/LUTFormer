@@ -58,7 +58,6 @@ You can run a demo with pretrained models to enhance your own images.
    - Place your images in the directory specified by `--input_dir` (default: `root/LUTFormer_code/demo_img/input`)
    - The enhanced results will be saved to `--output_dir` (default: `root/LUTFormer_code/demo_img/result`)
 2. (Optional) Check configuration:
-   - Edit the YAML configuration file (default: `root/LUTFormer_code/configs/Retouching_FiveK.yaml`)
    - You can also override settings via command-line arguments, including:
       - `--yaml_path` (default: `root/LUTFormer_code/configs/Retouching_FiveK.yaml`)
       - `--pretrained_path` (default: `root/LUTFormer_code/pretrained/Retouching_FiveK_expertC.pth`)
