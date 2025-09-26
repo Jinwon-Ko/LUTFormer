@@ -9,7 +9,7 @@ from utils.viz_utils import Visualizer
 
 
 def get_loss_names(cfg):
-    loss_names = ['recon', 'grad', 'perceptual']    #, 'regular_mn', 'regular_tv', 'constraint'
+    loss_names = ['recon', 'grad', 'perceptual']
     loss_t = {'Total': 0}
     loss_t.update({key: 0 for key in loss_names})
     return loss_names, loss_t
@@ -17,24 +17,19 @@ def get_loss_names(cfg):
 
 def get_total_loss(cfg, criterion, outputs, gt, l_names=[]):
     loss_dict = {}
+    if cfg.dataset_name == 'PPR10K':
+        target = gt * outputs['weights']
+        enhanced = enhanced * outputs['weights']
+    else:
+        target = gt
+        enhanced = outputs['enhanced']
     for l_name in l_names:
         if l_name == 'recon':
-            enhanced = outputs['enhanced']
-            if cfg.dataset_name == 'PPR10K':
-                gt = gt * outputs['weights']
-                enhanced = enhanced * outputs['weights']
-            loss_dict.update(criterion.get_reconsturction_loss(enhanced, gt, l_name=l_name))
+            loss_dict.update(criterion.get_reconsturction_loss(enhanced, target, l_name=l_name))
         elif l_name == 'grad':
-            loss_dict.update(criterion.get_grad_loss(outputs['enhanced'], gt, l_name=l_name))
+            loss_dict.update(criterion.get_grad_loss(enhanced, target, l_name=l_name))
         elif l_name == 'perceptual':
             loss_dict.update(criterion.get_perceptual_loss(outputs['enhanced'], gt, l_name=l_name))
-
-        elif l_name == 'constraint':
-            loss_dict.update(criterion.get_LUT_range_constraint_loss(outputs['low_density_LUT'], l_name=l_name))
-        elif l_name == 'regular_mn':
-            loss_dict.update(criterion.get_LUT_regularization_mn_loss(outputs['low_density_LUT'], l_name=l_name))
-        elif l_name == 'regular_tv':
-            loss_dict.update(criterion.get_LUT_regularization_tv_loss(outputs['low_density_LUT'], l_name=l_name))
 
     return loss_dict
 
