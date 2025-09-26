@@ -19,7 +19,7 @@ def get_total_loss(cfg, criterion, outputs, gt, l_names=[]):
     loss_dict = {}
     if cfg.dataset_name == 'PPR10K':
         target = gt * outputs['weights']
-        enhanced = enhanced * outputs['weights']
+        enhanced = outputs['enhanced'] * outputs['weights']
     else:
         target = gt
         enhanced = outputs['enhanced']
