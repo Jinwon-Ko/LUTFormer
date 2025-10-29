@@ -1,7 +1,8 @@
-# LUTFormer: Lookup Table Transformer for Image Enhancement.
+# [Neurocomputing 2025] LUTFormer: Lookup Table Transformer for Image Enhancement.
 ### Jinwon Ko, Keunsoo Ko, Hanul Kim and Chang-Su Kim.
 
-Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"**.
+Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"** in Neurocomputing 2025. 
+[[Elsevier]](https://doi.org/10.1016/j.neucom.2025.131863) 
 
 ## Dataset
 The [FiveK](https://data.csail.mit.edu/graphics/fivek/), [PPR10K](https://github.com/csjliang/PPR10K), [UIEB](https://li-chongyi.github.io/proj_benchmark.html), and [EUVP](https://irvlab.cs.umn.edu/resources/euvp-dataset) datasets are used for experiments.  </br>
