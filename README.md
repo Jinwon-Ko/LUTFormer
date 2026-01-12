@@ -4,6 +4,8 @@
 Official code for **"LUTFormer: Lookup Table Transformer for Image Enhancement"** in Neurocomputing 2025. 
 [[paper]](https://doi.org/10.1016/j.neucom.2025.131863) 
 
+<img src="https://github.com/Jinwon-Ko/LUTFormer/blob/main/results/Architecture.pdf" alt="overview" width="100%" height="70%" border="10"/>
+
 ## Dataset
 The [FiveK](https://data.csail.mit.edu/graphics/fivek/), [PPR10K](https://github.com/csjliang/PPR10K), [UIEB](https://li-chongyi.github.io/proj_benchmark.html), and [EUVP](https://irvlab.cs.umn.edu/resources/euvp-dataset) datasets are used for experiments.  </br>
 The [AdaInt](https://github.com/ImCharlesY/AdaInt/blob/main/Prepare_FiveK.md) project also provides an instruction for generating a 480p version of FiveK to accelerate in the training process. 
